@@ -1,0 +1,54 @@
+.container {
+  /* background-image: url("https://64.media.tumblr.com/bb292902f8fd2839428718e87c976113/b631ab06ae2913e6-e3/s2048x3072/38ae050357741e3f0300e35eddfb177c82609aad.png"); */
+  /* background-image: url("./landing_1.jpg"); */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* color: white; */
+  width: 98.8vw;
+  border: 1px solid red;
+  height: 97vh;
+  justify-content: center;
+}
+
+.container,
+.radio,
+.auth_container {
+  display: flex;
+}
+
+.radio {
+  width: 20px;
+  height: 30%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  top: 35%;
+  left: 5%;
+  position: fixed;
+}
+
+.radio_button:hover {
+  border: 3px solid gray;
+}
+
+.radio_button {
+  width: 15px;
+  border: 3px solid black;
+  height: 15px;
+}
+
+.active,
+.radio_button {
+  border-radius: 50%;
+}
+
+.active {
+  background-color: green;
+  background-size: fill;
+  height: 21px;
+  width: 21px;
+}
+
+.auth_container {
+  align-items: center;
+}
