@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import styles from "./SectionC.module.css";
 
 export const SectionC = () => {
     return (
       <div
         id="c"
-        style={{ width: "98.8vw", height: "97vh", border: "1px solid blue" }}
+        className={styles.container}
       >
         <h1>Section C</h1>
       </div>

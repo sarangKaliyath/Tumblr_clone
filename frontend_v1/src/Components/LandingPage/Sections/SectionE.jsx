@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
+import styles from "./SectionE.module.css";
 
 export const SectionE = () => {
-    return (
-      <div
-        id="e"
-        style={{ width: "98.8vw", height: "98vh", border: "1px solid blue" }}
-      >
-        <h1>Section E</h1>
-      </div>
-    );
-}
+  return (
+    <div
+      id="e"
+      className={styles.container}
+    >
+      <h1>Section E</h1>
+    </div>
+  );
+};

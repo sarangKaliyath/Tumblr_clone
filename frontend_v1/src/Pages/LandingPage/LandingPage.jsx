@@ -2,7 +2,9 @@ import React from "react";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { Link } from "react-scroll";
 import styles from "./LandingPage.module.css";
+import { TumblrQuote } from "../../Components/LandingPage/TumblrQuote";
 import { Auth } from "../../Components/LandingPage/Auth";
+import { TermsLinks } from "../../Components/LandingPage/TermsLinks";
 import { SectionB } from "../../Components/LandingPage/Sections/SectionB";
 import { SectionC } from "../../Components/LandingPage/Sections/SectionC";
 import { SectionD } from "../../Components/LandingPage/Sections/SectionD";
@@ -31,8 +33,14 @@ export const LandingPage = () => {
             );
           })}
         </div>
-        <div className={styles.auth_container}>
-          <Auth />
+        <div className={styles.main}>
+          <div className={styles.auth_container}>
+            <TumblrQuote />
+            <Auth />
+          </div>
+          <div className={styles.links}>
+            <TermsLinks />
+          </div>
         </div>
       </div>
       <div>

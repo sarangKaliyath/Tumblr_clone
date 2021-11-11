@@ -36,9 +36,11 @@ export const Auth = () => {
             variant="contained"
             size="large"
             style={{
-              margin: "2.5% 0%",
+              margin: "0% 0% 4% 0%",
               backgroundColor: color,
               textTransform: "none",
+              fontWeight: 700,
+              color: "black",
             }}
           >
             {text}
@@ -64,10 +66,11 @@ export const Auth = () => {
             size="large"
             style={{
               textTransform: "none",
-              margin: "2.5% 0%",
+              margin: "2% 0%",
               display: "flex",
               backgroundColor: "#FFFFFF",
               color: "black",
+              fontWeight: 700,
             }}
           >
             {icon} {text}
@@ -76,7 +79,8 @@ export const Auth = () => {
       })}
 
       <div className={styles.trending_text}>
-        <IoCompassOutline size={30} className={styles.icons} />Here's what's trending
+        <IoCompassOutline size={30} className={styles.icons} />
+        Here's what's trending
       </div>
     </div>
   );

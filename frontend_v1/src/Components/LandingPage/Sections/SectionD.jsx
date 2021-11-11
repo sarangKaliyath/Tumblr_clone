@@ -1,11 +1,9 @@
 import React from "react";
+import styles from "./SectionD.module.css";
 
 export const SectionD = () => {
   return (
-    <div
-      id="d"
-      style={{ width: "98.8vw", height: "97vh", border: "1px solid blue" }}
-    >
+    <div id="d" className={styles.container}>
       <h1>Section D</h1>
     </div>
   );
