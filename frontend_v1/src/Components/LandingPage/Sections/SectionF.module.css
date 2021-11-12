@@ -1,0 +1,45 @@
+.container {
+  width: 98.8vw;
+  height: 100vh;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > h1 {
+  padding: 0%;
+  line-height: 60px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 48px;
+}
+
+.container > p {
+  font-size: 16px;
+  line-height: 24px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  margin: 1% 0% 2% 0%;
+  padding: 0px;
+}
+
+.container h1:first-child {
+  margin-top: 3%;
+}
+
+.links {
+  display: flex;
+  width: 98%;
+  justify-content: flex-end;
+  padding: 0% 2% 0% 0%;
+}
+
+.auth {
+  margin-bottom: 3%;
+}

@@ -9,7 +9,6 @@
 .search_container {
   border: 1px solid black;
   display: flex;
-
   align-items: center;
 }
 
@@ -31,9 +30,11 @@
 }
 .login_container,
 .home_container {
+  width: 98.8vw;
   height: 54px;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
 }
 .left_nav {
   justify-content: left;
