@@ -1,14 +1,11 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./Auth.module.css";
+import { button_style } from "../Navbar/Button_style";
 import { Button } from "@mui/material";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillApple } from "react-icons/ai";
 import { IoCompassOutline } from "react-icons/io5";
-
-const button_style = [
-  { text: "Sign up", color: "#00B8FF" },
-  { text: "Log in", color: "#00CF35" },
-];
 
 const auth_button_style = [
   {
@@ -28,9 +25,17 @@ const auth_button_style = [
 ];
 
 export const Auth = () => {
+  const arr = button_style.reverse();
+
+  const history = useHistory();
+
+  const handleClick = (link) => {
+    history.push(link);
+  };
+
   return (
     <div className={styles.container}>
-      {button_style.map(({ text, color }) => {
+      {arr.map(({ text, color, link }) => {
         return (
           <Button
             variant="contained"
@@ -41,6 +46,9 @@ export const Auth = () => {
               textTransform: "none",
               fontWeight: 700,
               color: "black",
+            }}
+            onClick={() => {
+              handleClick(link);
             }}
           >
             {text}
