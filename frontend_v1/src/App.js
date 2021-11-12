@@ -4,6 +4,7 @@ import "./App.css";
 // import NavbarLogin from "./Components/Navbar1st/NavbarLogin";
 // import NavbarSignup from "./Components/Navbar1st/NavbarSignUp";
 // import LoginPage from "./Components/Login/LoginPage";
+// import Tags from "./Components/SelectTags/tags"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       {/* <NavbarSignup/>
       <SignUpPage /> */}
 
+      {/* <Tags /> */}
     </div>
   );
 }

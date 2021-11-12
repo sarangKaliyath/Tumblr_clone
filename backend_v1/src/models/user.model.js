@@ -7,8 +7,8 @@ const userSchema = new mongoose.Schema({
     blogName: { type: String, required: true },
     avtar: { type: String},
     tags: [{ type: String }],
-    followers: [{ type: String }],
-    following: [{ type: String}],
+    followers: [{ type: String, unique:true }],
+    following: [{ type: String, unique:true}],
 },
     {
         versionKey: false,
