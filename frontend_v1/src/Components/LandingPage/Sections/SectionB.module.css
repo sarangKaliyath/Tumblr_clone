@@ -1,7 +1,50 @@
 .container {
-    border: 1px solid blue;
   background-color: #00cf35;
   /* height: 97vh; */
   height: 110vh;
   width: 98.8vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container div:first-child {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.image {
+  width: 40%;
+}
+
+.container div img:only-child {
+  width: 100%;
+}
+
+.text > h1 {
+  font-size: 3rem;
+  line-height: 60px;
+  word-spacing: 0px;
+  margin: 0px;
+}
+.text {
+  text-align: center;
+
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: start;
+  text-indent: 0px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  padding: 0px;
+}
+
+.text > p {
+  line-height: 24px;
+  margin: 0px 0px 12px;
 }
