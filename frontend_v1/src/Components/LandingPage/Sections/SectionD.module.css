@@ -1,0 +1,8 @@
+.container {
+    background-color: #001935;
+    width: 98.8vw;
+  /* height: 97vh; */
+  height: 100vh;
+  border: 1px solid blue;
+}
+

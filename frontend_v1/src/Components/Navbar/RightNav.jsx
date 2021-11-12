@@ -28,6 +28,8 @@ export const RightNav = ({ page }) => {
               margin: `0% ${mRight} 0% ${mLeft}`,
               backgroundColor: color,
               minWidth: "10%",
+              fontWeight: 700,
+              color: "black",
             }}
           >
             {text}
@@ -53,7 +55,6 @@ export const RightNav = ({ page }) => {
         <IoFlash size={25} />
       </div>
       <div>
-        {/* <TiUser size={30} /> */}
         <UserDrawer />
       </div>
       <div>
