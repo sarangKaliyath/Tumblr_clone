@@ -1,0 +1,52 @@
+/* ForYou Page Css Start */
+
+.mainFor {
+    background-color: #001935;
+    /* min-height: 100vh; */
+    width: 100%;
+}
+
+
+@media (min-width: 1310px) {
+.mainSubFor {
+    max-width: 1290px;
+}
+}
+
+.mainSubFor {
+    margin-top: 0;
+    box-sizing: border-box;
+    display: flex;
+    margin: 40px auto 0;
+    /* max-width: 990px; */
+    padding: 0 8px;
+    width: 100%;
+    /* border: 1px solid white; */
+}
+
+
+.mainSubFor_II {
+    border-right: 1px solid #21374F;
+    padding-right: 14px;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 625px; */
+    width: 100%;
+}
+@media (min-width: 1310px){
+.mainSubFor_II {
+    max-width: 940px;
+}
+}
+
+.mainSubFor_III {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding-top: 24px;
+    width: 100%;
+    /* min-height: calc(100vh - 55px + 1px); */
+    /* border: 1px solid red; */
+}

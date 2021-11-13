@@ -1,0 +1,208 @@
+/* LinkTab Css */
+
+.mainBox {
+    margin-top: -2.6%;
+    /* border: 1px solid palegoldenrod; */
+    height: auto;
+}
+.Tab1:hover {
+    background-color: rgb(33, 55, 79);
+}
+.Tab2:hover {
+    background-color: rgb(33, 55, 79);
+}
+.Tab3:hover {
+    background-color: rgb(33, 55, 79);
+}
+.Tab4 Button:hover {
+    background-color: rgb(33, 55, 79);
+}
+
+/* More button Css*/
+
+.menuWidth {
+    padding-left: 50px;
+}
+.Tab4 Button {
+    border-radius: 0px;
+}
+
+/* Corocards Css */
+.CarMain {
+    margin-bottom: 40px;
+    width: 100%;
+}
+.CarSubMain {
+    margin: 0px auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+}
+.CarSubMain1 {
+    display: flex;
+    overflow-y: scroll;
+}
+/*Array Css*/
+/* .CarArrMain {
+    /* margin-right: 10px; 
+} */
+.CarArrMain1{
+    opacity: 1;
+}
+.CarArrMain2 {
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 8px;
+    width: 145px;
+    animation: qGGtX .35s ease-in-out normal;
+}
+.CarArrMain3{
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    margin-bottom: 8px;
+    max-width: 100%;
+    min-height: 2em;
+    color: white;
+}
+.CarArrMain3 span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.CarImgMain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.CarImgMain1{
+    border-radius: 3px;
+    /* -o-object-fit: cover; */
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    height: 93.3333333333px;
+    width: 56px;
+}
+.CarImgMain2{
+    line-height: 0;
+    position: relative;
+    width: 100%;
+    padding-bottom: 166.667%;
+}
+.CarImgMain2 img{
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* -o-object-fit: cover; */
+    object-fit: cover;
+    width: 100%;
+    background-color: white;
+}
+.CarImgMain3{
+    border-radius: 3px;
+    /* -o-object-fit: cover; */
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    height: 93.3333333333px;
+    width: 56px;
+}
+.CarImgMain4{
+    line-height: 0;
+    position: relative;
+    width: 100%;
+    padding-bottom: 166.667%;
+}
+.CarImgMain4 img{
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* -o-object-fit: cover; */
+    object-fit: cover;
+    width: 100%;
+    background-color: white;
+}
+.CarArrMain5{
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    font: inherit;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.CarArrButt1 {
+    background-color: rgb(255, 255, 255);
+    font:inherit;
+    color: inherit;
+    width: 100%;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    display: block;
+    cursor: pointer;
+}
+.CarArrButt2{
+    display: block;
+    padding: 8px 20.5px;
+    font: inherit;
+    color: inherit;
+}
+
+/* PostData Css */
+.postMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+    height: 1205px;
+}
+.postSub1 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0% 10%;
+    height: 1205px;
+    border: 1px solid green;
+}
+@media (min-width: 1280px){
+.postSub1 {
+    max-width: 1260px;
+}
+}
+@media (min-width: 960px){
+    .postSub1 {
+        max-width: 940px;
+}
+}
+@media (min-width: 640px){
+    .postSub1 {
+        max-width: 620px;
+}
+}
+.postSub2{
+    --post-padding: 10px;
+    --post-header-vertical-padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+    height: 1205px;
+    border: 1px solid red;
+}
