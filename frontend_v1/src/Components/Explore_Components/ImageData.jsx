@@ -5,19 +5,29 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 export default function DataImageList() {
+
+  
+
   return (
     <Box sx={{ width: 800, height: 450 }} style={{
-        border: "2px solid yellow"
+        // border: "2px solid yellow"
     }}>
-      <ImageList variant="masonry" cols={3} gap={12}>
+      <ImageList variant="masonry" cols={3} gap={12} sx={{ width: 800}}>
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
+          <ImageListItem key={item.img} style={{
+            backgroundColor: "white",
+            borderRadius: "3px"
+          }}>
             <ImageListItemBar position="below" title={item.author} />
             <img
               src={`${item.img}?w=248&fit=crop&auto=format`}
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
+              style={{
+                borderBottomRightRadius: "3px",
+                borderBottomLeftRadius: "3px"
+              }}
             />
           </ImageListItem>
         ))}
