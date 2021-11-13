@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./SectionF.module.css";
 import { Auth } from "../Auth";
-import { TermsLinks } from "../TermsLinks";
 
 export const SectionF = () => {
   return (
@@ -12,9 +11,7 @@ export const SectionF = () => {
       <div className={styles.auth}>
         <Auth />
       </div>
-      <div className={styles.links}>
-        Posted by random
-      </div>
+      <div className={styles.links}>Posted by random</div>
     </div>
   );
 };

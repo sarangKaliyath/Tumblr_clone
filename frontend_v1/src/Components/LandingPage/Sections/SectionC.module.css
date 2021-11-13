@@ -7,6 +7,8 @@
   flex-direction: column;
   justify-content: flex-end;
   color: #fff;
+  font-family: "Favorit, Helvetica Neue, HelveticaNeue, Helvetica, Arial,sans-serif";
+
 }
 
 .text {
@@ -39,6 +41,7 @@
   line-height: 60px;
   word-spacing: 0px;
   margin: 0px;
+  font-weight: 400;
 }
 .text > p {
   line-height: 24px;

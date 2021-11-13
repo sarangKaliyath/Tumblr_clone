@@ -6,30 +6,27 @@
   background-repeat: no-repeat;
   backface-visibility: hidden;
   animation: images 20s linear infinite 0s;
-  /* animation-duration: 10s; */
   animation-timing-function: ease-in-out;
-  background-image: url("https://64.media.tumblr.com/23f67c9e48743b71019a2760ec964eeb/tumblr_pht85lwOZA1wo5099o1_500.png");
+  background-image: url("https://64.media.tumblr.com/6bd892d3f764f3915a015a5aeb977cac/87e536a750c8c5a2-62/s2048x3072/0145ae48867240f9f2e3ea0b81699e005d908231.jpg");
+  font-family: "Favorit, Helvetica Neue, HelveticaNeue, Helvetica, Arial,sans-serif";
 }
-
 @keyframes images {
   0% {
-    background-image: url("https://64.media.tumblr.com/bb292902f8fd2839428718e87c976113/b631ab06ae2913e6-e3/s2048x3072/38ae050357741e3f0300e35eddfb177c82609aad.png");
+    background-image: url("https://64.media.tumblr.com/00f36bb3deb0bd8f388606ac122ebc8d/e6555daf41272f48-78/s2048x3072/4eebcd0e2ea6a30ea259d83a9b880b824adc2551.png");
   }
 
   25% {
-    background-image: url("https://64.media.tumblr.com/73c2c919a2ca252149c620480b045ee4/6b6423556eef2746-28/s2048x3072/9d598e55b03d9a2201068eced36f3124d3cf18e7.jpg");
+    background-image: url("https://64.media.tumblr.com/6bd892d3f764f3915a015a5aeb977cac/87e536a750c8c5a2-62/s2048x3072/0145ae48867240f9f2e3ea0b81699e005d908231.jpg");
   }
 
   50% {
-    background-image: url("https://64.media.tumblr.com/5ce6ff046d5a765dc9050ab9ac819627/975e9bab230b7f48-19/s2048x3072/2c5d96129483dc1b61153607ca186cbcfba608c4.png");
+    background-image: url("https://64.media.tumblr.com/4627c432875ec563290ac65c6130852a/d9898eb9f400be4b-3e/s2048x3072/26966677e6cf7cacd4e8e41f2f1df958f479462e.jpg");
   }
-
   75% {
     background-image: url("https://64.media.tumblr.com/44a6f98d0b14f7a28280bfbc7548137f/b03247dac2761ace-db/s2048x3072/105b1ef9727eb70c4244b6fe2428629d7710c9e5.png");
   }
-
   100% {
-    background-image: url("https://64.media.tumblr.com/c0ddb792e763b8611a7215b2c570f19a/458f60ab57ae1d3b-aa/s2048x3072/970b040a01324030061243fc8ce025af31450366.jpg");
+    background-image: url("https://64.media.tumblr.com/3d9703be7bcc2d5737c0c8a429ac3d4f/ac607d753617fc17-e6/s2048x3072/b8313f148854a0371af353f8a8f5b116a4752e1b.png");
   }
 }
 

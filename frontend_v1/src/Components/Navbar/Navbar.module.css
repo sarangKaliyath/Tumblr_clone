@@ -60,16 +60,60 @@
 }
 .tumblr_icon_container {
   width: 5%;
-  padding: 1% 2%;
+  padding: 0% 0%;
 }
 
 .search_container {
   margin-left: 20px;
-  width: 60%;
-  /* width: 100%; */
+  width: 90%;
 }
-.search_container input{
-  width: 60%;
+.search_container input {
+  width: 438px;
+}
+
+.tumblr_icon_container > svg:hover {
+  animation-name: fill;
+  animation-duration: 4s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fill {
+  0% {
+    fill: rgb(229, 231, 234);
+  }
+  10% {
+    fill: rgb(0, 255, 51);
+  }
+  20% {
+    fill: rgb(255, 73, 47);
+  }
+  30% {
+    fill: rgb(255, 138, 0);
+  }
+  40% {
+    fill: rgb(232, 215, 56);
+  }
+  50% {
+    fill: rgb(rgb(56, 226, 226));
+  }
+  60% {
+    fill: rgb(255, 98, 206);
+  }
+  70% {
+    fill: rgb(0, 184, 255);
+  }
+  80% {
+    fill: rgb(2, 27, 65);
+  }
+  90% {
+    fill: rgb(119, 119, 119);
+  }
+  100% {
+    fill: rgba(102, 2, 94, 0.74);
+  }
 }
 /* **************************************************** */
 
