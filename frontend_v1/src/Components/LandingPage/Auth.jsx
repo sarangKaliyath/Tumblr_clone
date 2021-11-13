@@ -38,6 +38,7 @@ export const Auth = () => {
       {arr.map(({ text, color, link }) => {
         return (
           <Button
+            key={text}
             variant="contained"
             size="large"
             style={{
@@ -70,6 +71,7 @@ export const Auth = () => {
       {auth_button_style.map(({ text, icon }) => {
         return (
           <Button
+            key={text}
             variant="contained"
             size="large"
             style={{

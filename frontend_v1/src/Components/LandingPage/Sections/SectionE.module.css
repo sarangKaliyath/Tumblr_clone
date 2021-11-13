@@ -1,11 +1,10 @@
 .container {
   background-color: #ff8a00;
   width: 98.8vw;
-  /* height: 97vh; */
   height: 100vh;
-  border: 1px solid blue;
   flex-direction: column;
   align-items: center;
+  font-family: "Favorit, Helvetica Neue, HelveticaNeue, Helvetica, Arial,sans-serif";
 }
 
 .image,
@@ -43,6 +42,7 @@
   line-height: 60px;
   word-spacing: 0px;
   margin: 0px;
+  font-weight: 400;
 }
 .text > p {
   line-height: 24px;

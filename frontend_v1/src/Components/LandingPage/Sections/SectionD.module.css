@@ -7,6 +7,8 @@
 
   align-items: flex-end;
   justify-content: center;
+  font-family: "Favorit, Helvetica Neue, HelveticaNeue, Helvetica, Arial,sans-serif";
+
 }
 .image {
   width: 45%;
@@ -36,6 +38,7 @@
   line-height: 60px;
   word-spacing: 0px;
   margin: 30% 0% 0% 0%;
+  font-weight: 400;
 }
 .text > p {
   line-height: 24px;

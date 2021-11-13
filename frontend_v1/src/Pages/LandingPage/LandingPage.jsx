@@ -23,6 +23,7 @@ export const LandingPage = () => {
           {arr.map((el) => {
             return (
               <Link
+                key={el}
                 to={el}
                 spy={true}
                 activeClass={styles.active}

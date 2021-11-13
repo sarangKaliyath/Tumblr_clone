@@ -1,14 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { UserDrawer } from "./UserDrawer";
 import styles from "./Navbar.module.css";
 import { button_style } from "./Button_style";
 import { Button } from "@mui/material";
-import { AiFillHome } from "react-icons/ai";
-import { IoCompassOutline, IoFlash } from "react-icons/io5";
-import { IoIosMail } from "react-icons/io";
-import { RiWechat2Fill } from "react-icons/ri";
-import { MdModeEdit } from "react-icons/md";
+import { home_icons } from "./TumblrIcon";
 
 export const RightNav = ({ page }) => {
   const history = useHistory();
@@ -22,6 +17,7 @@ export const RightNav = ({ page }) => {
       {button_style.map(({ text, color, mRight, mLeft, link }) => {
         return (
           <Button
+            key={text}
             size="medium"
             variant="contained"
             style={{
@@ -43,27 +39,9 @@ export const RightNav = ({ page }) => {
     </div>
   ) : page === "home" ? (
     <div className={styles.right_nav_container}>
-      <div>
-        <AiFillHome size={25} />
-      </div>
-      <div>
-        <IoCompassOutline size={30} />
-      </div>
-      <div>
-        <IoIosMail size={30} />
-      </div>
-      <div>
-        <RiWechat2Fill size={30} />
-      </div>
-      <div>
-        <IoFlash size={25} />
-      </div>
-      <div>
-        <UserDrawer />
-      </div>
-      <div>
-        <MdModeEdit size={25} />
-      </div>
+      {home_icons.map((icon, index) => {
+        return <div key={index}>{icon}</div>;
+      })}
     </div>
   ) : (
     <></>
