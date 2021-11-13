@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaRegCompass } from "react-icons/fa";
+import axios from "axios";
 
 
 
@@ -73,11 +74,11 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUp() {
   const classes = useStyles();
   const [error, setError] = useState(false);
-  const [errorData, setErrorData] = useState("Invalid Credentials");
+  const [errorData, setErrorData] = useState("");
   const [input, setInput] = useState({
     email: "",
     password: "",
-    blog_name: "",
+    bloName: "",
   });
 
 
@@ -91,8 +92,20 @@ export default function SignUp() {
         setInput({
            email: "",
            password: "",
-           blog_name: "",
-      });
+           blogName: "",
+        });
+      axios.post("http://localhost:2345/login", {
+           input
+      }).then((res) => {
+            setError(false);
+        localStorage.setItem(
+        "tumblrUser",
+        JSON.stringify({ auth: true, token: res.data.token })
+      );
+        }).catch((err) => {
+          setError(true);
+          setErrorData("Invalid Credentials")
+        });
     }
 
   return (

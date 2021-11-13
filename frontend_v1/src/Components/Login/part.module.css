@@ -1,30 +1,30 @@
 #slide {
 	width: 100%;
 	height: 100vh;
-	background-position: center center;
+	background-position: center left;
 	background-size: cover;
 	background-repeat: no-repeat;
 	backface-visibility: hidden;
-	animation: slideBg 9s linear infinite 0s;
+	animation: slideBg 20s linear infinite 0s;
 	/* animation-duration: 10s; */
 	animation-timing-function: ease-in-out;
-	background-image: url("https://64.media.tumblr.com/23f67c9e48743b71019a2760ec964eeb/tumblr_pht85lwOZA1wo5099o1_500.png");
+	background-image: url("https://64.media.tumblr.com/6bd892d3f764f3915a015a5aeb977cac/87e536a750c8c5a2-62/s2048x3072/0145ae48867240f9f2e3ea0b81699e005d908231.jpg");
 }
 @keyframes slideBg {
 	0% {
-		background-image: url("https://64.media.tumblr.com/bb292902f8fd2839428718e87c976113/b631ab06ae2913e6-e3/s2048x3072/38ae050357741e3f0300e35eddfb177c82609aad.png");
+		background-image: url("https://64.media.tumblr.com/6bd892d3f764f3915a015a5aeb977cac/87e536a750c8c5a2-62/s2048x3072/0145ae48867240f9f2e3ea0b81699e005d908231.jpg");
 	}
 
 	25% {
-		background-image: url("https://64.media.tumblr.com/73c2c919a2ca252149c620480b045ee4/6b6423556eef2746-28/s2048x3072/9d598e55b03d9a2201068eced36f3124d3cf18e7.jpg");
+		background-image: url("https://64.media.tumblr.com/6e9686981f8b4ef28e8d6529a830411b/e1068b170f41259c-8e/s400x600/a686441257b16a03c6176d894b4b0bae1f77f302.gifv");
 	}
 
 	50% {
-		background-image: url("https://64.media.tumblr.com/5ce6ff046d5a765dc9050ab9ac819627/975e9bab230b7f48-19/s2048x3072/2c5d96129483dc1b61153607ca186cbcfba608c4.png");
+		background-image: url("https://64.media.tumblr.com/45fffe905138fb3f35f75f2000654f70/72061090efc0b740-f4/s500x750/6a2b6177c4ead0a0a237711e198a00b13adbc100.jpg");
 	}
 
 	75% {
-		background-image: url("https://64.media.tumblr.com/44a6f98d0b14f7a28280bfbc7548137f/b03247dac2761ace-db/s2048x3072/105b1ef9727eb70c4244b6fe2428629d7710c9e5.png");
+		background-image: url("https://64.media.tumblr.com/e322619a70e5e115871f3393729700be/936036fb8250d51a-e4/s540x810/1037a78af2f4fa97d26dec40ed7d363d88aa2083.png");
 	}
 
 	100% {

@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaRegCompass } from "react-icons/fa";
+import axios from "axios";
 import { display } from "@mui/system";
 
 
@@ -73,12 +74,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function SignUp() {
   const classes = useStyles();
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
   const [errorData, setErrorData] = useState('')
   const [input, setInput] = useState({
     email: "",
     password: "",
-    blog_name: "",
+    blogName: "",
   });
 
 
@@ -92,9 +93,29 @@ export default function SignUp() {
         setInput({
            email: "",
            password: "",
-           blog_name: "",
-      });
-    }
+           blogName: "",
+        });
+      axios.post("http://localhost:2345/register", {
+           input
+      }).then((res) => {
+            setError(false);
+            console.log(res.data);
+        }).catch((err) => {
+          console.log(err);
+          setError(true);
+          setErrorData("User already exists");
+        });
+  }
+  const handleGoogleAuth = () => {
+     axios.get("http://localhost:2345/auth/google").then((res) => {
+            setError(false);
+            console.log(res.data);
+        }).catch((err) => {
+          console.log(err);
+          setError(true);
+          setErrorData("User already exists");
+        });
+  }
 
   return (
     <div className={styles.main_sign}>
@@ -121,8 +142,8 @@ export default function SignUp() {
               onChange={handlePayload}
             />
             <input
-                name="blog_name"
-                value={input.blog_name}
+                name="blogName"
+                value={input.blogName}
               className={classes.email}
               type="text"
               placeholder="Blog name"
@@ -149,7 +170,8 @@ export default function SignUp() {
                     style={{backgroundColor:"white", color:"black", fontWeight: "550", marginBottom : "10px"}}
                   className={classes.buton3}
                   variant="contained"
-           startIcon={<FcGoogle />}
+          startIcon={<FcGoogle />}
+          onClick={()=>handleGoogleAuth()}
         >
           Continue with Google
         </Button>
