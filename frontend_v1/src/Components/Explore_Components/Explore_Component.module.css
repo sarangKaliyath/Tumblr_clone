@@ -1,9 +1,9 @@
 /* LinkTab Css */
 
 .mainBox {
-    margin-top: -2.6%;
+    margin-top: -1.8%;
     /* border: 1px solid palegoldenrod; */
-    height: auto;
+    /* height: auto; */
 }
 .Tab1:hover {
     background-color: rgb(33, 55, 79);
@@ -168,16 +168,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
-    height: 1205px;
+    /* border: 1px solid red; */
+    height: 1405px;
 }
 .postSub1 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 0% 10%;
-    height: 1205px;
-    border: 1px solid green;
+    height: 1405px;
+    /* border: 1px solid green; */
 }
 @media (min-width: 1280px){
 .postSub1 {
@@ -203,6 +203,311 @@
     /* position: relative; */
     width: 100%;
     height: auto;
-    height: 1205px;
-    border: 1px solid red;
+    height: 1405px;
+    /* border: 1px solid red; */
+}
+/* Side BAr Css*/
+
+.sideBarMain {
+    margin-left: 0;
+    padding-left: 15px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    width: 320px;;
+}
+
+.sideBarMain1 {
+    flex: 1;
+    display: block; 
+}
+.sideBarMain2 {
+    border-radius: 3px;
+    margin-bottom: 16px;
+    background-color:#122943;
+}
+.sideBarMain3 {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.333;
+    margin-bottom: 8px;
+    padding: 15px;
+    border-bottom: 1px solid #21374F;
+    color: rgb(255, 255, 255);
+}
+.sideBarMain2 span {
+    flex-grow: 2;
+}
+.sideBarMain4 {
+    color: inherit;
+    font: inherit;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.sideBarMain4 {
+    color: rgb(0, 184, 255);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+.sideBarMain5 {
+    min-height: 308px;
+}
+.sideBarMain5_1 {
+    color: rgb(255, 255, 255);
+    display: flex;
+    padding: 16px;
+    text-decoration: none;
+}
+.sideBarMain5_2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.sideBarMain6 {
+    border-radius: 3px;
+    display: block;
+    height: 45px;
+    margin-right: 16px;
+    overflow: hidden;
+    width: 64px;
+}
+.sideBarMain7 {
+    /* line-height: 0;
+    position: relative;
+    width: 100%;
+    padding-bottom: 166%; */
+    line-height: 0;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+.sideBarMain7 img {
+    /* left: 0;
+    position: absolute;
+    top: 0;
+    background-color: rgb(255, 255, 255); */
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* -o-object-fit: cover; */
+    object-fit: cover;
+    width: 100%;
+    background-color: white;
+}
+.sideBarMain8 {
+    display: flex;
+    flex-direction: column;
+}
+.sideBarMain9 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.sideBarMain10 {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    color: #A5AEB8;
+    font-size: .875rem;
+    font-weight: 400;
+    -webkit-hyphens: none;
+    hyphens: none;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sideBarMain11 button{
+    border: none;
+    border-top: 1px solid rgba(255,255,255,.13);
+    color: rgb(0, 184, 255);
+    display: block;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 8px;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    /* font: inherit; */
+    background-color: #122943;
+    cursor: pointer;
+}
+.sideBarMain12 span{
+    display: block;
+    color: inherit;
+    font: inherit;
+}
+.sideBarMain13 {
+    align-items: center;
+    display: flex;
+    padding-right: 14px;
+    position: relative;
+    text-align: right;
+}
+.sideBarMain14{
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.sideBarMain14 span {
+    margin-right: 10px;
+    word-break: keep-all;
+    color: rgb(0, 184, 255);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    display: block;
+}
+
+.sideBarMain15 {
+    color: white;
+    display: flex;
+    opacity: 1;
+}
+.sideBarMain16 {
+    display: flex;
+    width: 100%;
+}
+.sideBarMain17 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+}
+.sideBarMain18 {
+    vertical-align: top;
+    width: inherit;
+    display: inline-block;
+}
+.sideBarMain19 {
+    vertical-align: top;
+    width: inherit;
+    display: inline-block;
+}
+.sideBarMain20 {
+    word-wrap: break-word;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    line-height: 1.2;
+    min-height: 43px;
+    outline: none;
+    overflow-wrap: break-word;
+    padding: 8px 10px;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.sideBarMain21 {
+    align-items: center;
+    display: flex;
+}
+.sideBarMain22 {
+    margin-right: 11px;
+    position: relative;
+}
+.sideBarMain23 {
+    position: relative;
+}
+.sideBarMain24 {
+    width: 37px;
+    height: 37px;
+    position: relative;
+}
+.sideBarMain25 {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 3px;
+    
+    
+}
+.sideBarMain26 {
+    line-height: 0;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+.sideBarMain26 img {
+    width: 37px;
+    height: 37px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    display: block;
+    /* height: 100%; */
+    -o-object-fit: cover;
+    object-fit: cover;
+    /* width: 100%; */
+}
+.sideBarMain27 {
+    position: relative;
+}
+.sideBarMain28 {
+    align-items: center;
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: left;
+    word-break: break-word;
+    color: white;
+}
+.sideBarMain28 {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+}
+.sideBarMain29 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    word-break: break-word;
+    color: #A5AEB8;
+}
+.sideBarMain5-2 {
+    height: 236px;
+    width: calc(100% + 15px);
+    margin: 0;
+    overflow-y: hidden;
+    padding: 10px 0;
+    width: 100%;
 }
