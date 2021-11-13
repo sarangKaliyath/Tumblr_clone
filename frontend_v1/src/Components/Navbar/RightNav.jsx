@@ -4,6 +4,13 @@ import styles from "./Navbar.module.css";
 import { button_style } from "./Button_style";
 import { Button } from "@mui/material";
 import { home_icons } from "./TumblrIcon";
+import { AiFillHome } from "react-icons/ai";
+import { IoCompassOutline, IoFlash, IoLogOutOutline } from "react-icons/io5";
+import { IoIosMail } from "react-icons/io";
+import { RiWechat2Fill } from "react-icons/ri";
+import { MdModeEdit } from "react-icons/md";
+
+
 
 export const RightNav = ({ page }) => {
   const history = useHistory();
@@ -39,9 +46,22 @@ export const RightNav = ({ page }) => {
     </div>
   ) : page === "home" ? (
     <div className={styles.right_nav_container}>
-      {home_icons.map((icon, index) => {
-        return <div key={index}>{icon}</div>;
-      })}
+      {/* {home_icons.map((icon, index) => {
+        return <div key={index} icon=== >{icon}</div>;
+      })} */}
+      <div><AiFillHome size={25} 
+         onClick = {()=> history.push("/home")}
+      /></div>
+      <div><IoCompassOutline size={30}
+        onClick = {()=> history.push("/explore")}
+
+      /></div>
+      <div><IoIosMail size={30} /></div>
+      <div><RiWechat2Fill size={30} /></div>
+      <div><IoFlash size={25} /></div>
+      <div><IoFlash size={25} /></div>
+      <div> <MdModeEdit size={25} /></div>
+
     </div>
   ) : (
     <></>
