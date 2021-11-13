@@ -1,19 +1,16 @@
 .container {
   width: 98.8vw;
   height: 100vh;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
-
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   backface-visibility: hidden;
   animation: images 20s linear infinite 0s;
-  /* animation-duration: 10s; */
   animation-timing-function: ease-in-out;
   background-image: url("https://64.media.tumblr.com/23f67c9e48743b71019a2760ec964eeb/tumblr_pht85lwOZA1wo5099o1_500.png");
 }

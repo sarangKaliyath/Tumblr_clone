@@ -1,8 +1,43 @@
 .container {
-    background-color: #001935;
-    width: 98.8vw;
+  background-color: #001935;
+  width: 98.8vw;
   /* height: 97vh; */
   height: 100vh;
-  border: 1px solid blue;
+  color: #fff;
+
+  align-items: flex-end;
+  justify-content: center;
+}
+.image {
+  width: 45%;
+  padding-right: 2%;
+  height: 85%;
 }
 
+.image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.text,
+.container {
+  display: flex;
+}
+
+.text {
+  height: 85%;
+  flex-direction: column;
+
+  
+}
+
+.text > h1 {
+  font-size: 3rem;
+  line-height: 60px;
+  word-spacing: 0px;
+  margin: 30% 0% 0% 0%;
+}
+.text > p {
+  line-height: 24px;
+  margin: 0px 0px 12px;
+}
