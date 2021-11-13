@@ -10,9 +10,29 @@ const upload = require("../middleware/file-upload");
 router.get("", authanticate, async function (req, res) {
 
     try {
+        let postArray = []
         const admin = await User.findById("618df9c343ad8385f6225992").exec()
-        const post = await Post.find({ user_id: admin.id }).select().lean().exec();
-         res.status(200).json({post: post,user: admin});
+        //  const userPost = await Post.find({ user_id: req.user.id }).select().lean().exec();
+        const post = await Post.find({ user_id: [admin.id, req.user.id] }).sort({"timestamp":1}).select().lean().exec();
+
+         postArray = post
+       
+       postArray.reverse();
+        // console.log(postArray);
+         res.status(200).json({post: postArray,user: admin});
+    } catch (err) {
+         res.status(400).json({error: err.message});
+    }
+    
+   
+});
+
+router.get("/ownPost", authanticate, async function (req, res) {
+
+    try {
+       
+        const post = await Post.find({ user_id: req.user.id }).select().lean().exec();
+         res.status(200).json({post: post,user: req.user});
     } catch (err) {
          res.status(400).json({error: err.message});
     }
@@ -40,6 +60,7 @@ router.get("/followPost", authanticate, async function (req, res) {
 router.post("/create", authanticate, async function (req, res) {
 
     try {
+        console.log(req.body);
         let payload = {
            ...req.body, ["user_id"]: req.user.id
         }

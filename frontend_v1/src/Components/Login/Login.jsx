@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaRegCompass } from "react-icons/fa";
 import axios from "axios";
-
+import { useHistory } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -72,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 export default function SignUp() {
+  const history = useHistory();
   const classes = useStyles();
   const [error, setError] = useState(false);
   const [errorData, setErrorData] = useState("");
@@ -101,8 +102,10 @@ export default function SignUp() {
         localStorage.setItem(
         "tumblrUser",
         JSON.stringify({ auth: true, token: res.data.token })
-      );
-        }).catch((err) => {
+        );
+         history.push("/selectTags");
+      }
+      ).catch((err) => {
           setError(true);
           setErrorData("Invalid Credentials")
         });

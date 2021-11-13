@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-// import { useHistory } from 'react-router';
+ import { useHistory } from 'react-router-dom';
 import styles from './Tags.module.css';
 import axios from "axios";
 
@@ -48,7 +48,7 @@ const color = [
 let tag_ids = [];
 
 const Tags = () => {
-    // const history = useHistory();
+     const history = useHistory();
     // const { handleGetTags, handleUserInterests } = useContext(ContextApi);
     const [tags, setTags] = useState(false);
     if (!tags) {
@@ -113,7 +113,7 @@ const Tags = () => {
                     <div>Skip</div>
                     <div
                         onClick={() => {
-                            // handleUserInterests(tag_ids, history);
+                            history.push("/home");
                         }}
                     >
                         Select

@@ -3,23 +3,16 @@ import styles from './TextPost.module.css';
 import { IoIosSettings } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
 import TextField from '@mui/material/TextField';
+import axios from "axios";
 
 
 
 const TextPost = ({ handleClose }) => {
-   
 
-    const currUser = {
-        name: "abhay",
-        avtar: "",
-        blog_name:"abhayBlog"
-    }
 
-    const [createPost, setCreatePost] = useState({
+    let [createPost, setCreatePost] = useState({
         title: '',
-        description: '',
-        tags: [],
-        images: [],
+        content: '',
     });
 
     const handleCreatePostApi = () => {
@@ -32,27 +25,55 @@ const TextPost = ({ handleClose }) => {
         setCreatePost({ ...createPost, [name]: value });
     };
 
+     const [currUser, setCurrUser] = useState(false);
+    if (!currUser) {
+        axios.get("http://localhost:2345/user/currUser", {
+            headers: {
+                Authorization: "Bearer " + JSON.parse(localStorage.getItem("tumblrUser")).token,
+            }
+        }).then((res) => {
+            console.log(res.data);
+            setCurrUser(res.data.user);
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
     const handleSetTags = (e) => {
-        let { name, value } = e.target;
-        setTags(value);
-    };
+    //     let { name, value } = e.target;
+    //     setTags(value);
+     };
     const handleSubmitPost = () => {
         if (
             createPost.title.length === 0 ||
-            createPost.description.length === 0
+            createPost.content.length === 0
         )
             return;
-        let newTags = tags
-            .trim()
-            .split('#')
-            .map((el) => el.trim());
-        newTags = newTags.filter((tag) => tag !== '');
-        let payload = {
-            ...createPost,
-            tags: newTags,
-        };
+        // let newTags = tags
+        //     .trim()
+        //     .split('#')
+        //     .map((el) => el.trim());
+        // newTags = newTags.filter((tag) => tag !== '');
+        setCreatePost({
+            title: "",
+            content: ""
+        });
+        console.log(JSON.parse(localStorage.getItem("tumblrUser")).token);
+        console.log(createPost);
 
-        handleCreatePostApi(payload, handleClose);
+        axios.post("http://localhost:2345/post/create",{title:createPost.title, content:createPost.content}, {
+            headers: {
+                Authorization: "Bearer " + JSON.parse(localStorage.getItem("tumblrUser")).token,
+            }
+        }).then((res) => {
+            console.log("hello",res.data);
+            
+        }).catch((err) => {
+            console.log(err);
+        });
+
+        
+
+       // handleCreatePostApi(payload, handleClose);
     };
 
     return (
@@ -69,7 +90,7 @@ const TextPost = ({ handleClose }) => {
                     />
                 </div>
                 <div className={styles.top}>
-                    <div className={styles.left}>{currUser?.blog_name}</div>
+                    <div className={styles.left}>{currUser?.blogName}</div>
                     <div className={styles.right}>
                         <IoIosSettings
                             style={{
@@ -82,6 +103,7 @@ const TextPost = ({ handleClose }) => {
                 <div className={styles.inputFields}>
                     <TextField
                         name="title"
+                        value={createPost.title}
                         id="filled-textarea"
                         placeholder="Title"
                         multiline
@@ -93,7 +115,8 @@ const TextPost = ({ handleClose }) => {
                         }}
                     />
                     <TextField
-                        name="description"
+                        name="content"
+                         value={createPost.content}
                         id="filled-textarea"
                         placeholder="Your text here"
                         minRows={4}

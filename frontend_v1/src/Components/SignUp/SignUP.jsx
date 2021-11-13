@@ -7,6 +7,7 @@ import { FaApple } from "react-icons/fa";
 import { FaRegCompass } from "react-icons/fa";
 import axios from "axios";
 import { display } from "@mui/system";
+import { useHistory } from "react-router-dom";
 
 
 
@@ -73,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 export default function SignUp() {
+  const history = useHistory();
   const classes = useStyles();
   const [error, setError] = useState(false)
   const [errorData, setErrorData] = useState('')
@@ -99,7 +101,8 @@ export default function SignUp() {
            input
       }).then((res) => {
             setError(false);
-            console.log(res.data);
+        console.log(res.data);
+        history.push("/login")
         }).catch((err) => {
           console.log(err);
           setError(true);
@@ -107,14 +110,16 @@ export default function SignUp() {
         });
   }
   const handleGoogleAuth = () => {
-     axios.get("http://localhost:2345/auth/google").then((res) => {
-            setError(false);
-            console.log(res.data);
-        }).catch((err) => {
-          console.log(err);
-          setError(true);
-          setErrorData("User already exists");
-        });
+    //  axios.get("http://localhost:2345/auth/google").then((res) => {
+    //         setError(false);
+    //         console.log(res.data);
+    //     }).catch((err) => {
+    //       console.log(err);
+    //       setError(true);
+    //       setErrorData("User already exists");
+    //     });
+
+    window.location.href = "http://localhost:2345/auth/google";
   }
 
   return (

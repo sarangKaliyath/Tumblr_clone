@@ -46,4 +46,14 @@ router.post("/unFollowing", authanticate, async function (req, res) {
     }
 });
 
+router.get("/currUser", authanticate, async function (req, res) {
+    try {
+        const user = await User.findById(req.user.id).exec()
+
+         res.status(200).json({user:user});
+    } catch (err) {
+         res.status(400).json({error: err.message});
+    }
+})
+
 module.exports = router;

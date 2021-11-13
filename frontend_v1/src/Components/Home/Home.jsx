@@ -51,7 +51,7 @@ function ChildModal({ Prop, Prop1 }) {
                 onClose={handleClose}
                 aria-labelledby="child-modal-title"
                 aria-describedby="child-modal-description"
-            >
+            > 
                 <Box
                     sx={{
                         ...style,
@@ -61,7 +61,7 @@ function ChildModal({ Prop, Prop1 }) {
                         overflow: 'scroll',
                     }}
                 >
-                    <Prop1 handleClose={handleClose} />
+                  <Prop1 handleClose={handleClose} />
                 </Box>
             </Modal>
         </React.Fragment>
@@ -93,45 +93,58 @@ const Feed = () => {
         console.log("call api for like post");
     }
 
-    const user = {
-        name: "abhay",
-        avtar: "",
-        blog_name:"abhayBlog"
+    const [currUser, setCurrUser] = useState(false);
+    if (!currUser) {
+        axios.get("http://localhost:2345/user/currUser", {
+            headers: {
+                Authorization: "Bearer " + JSON.parse(localStorage.getItem("tumblrUser")).token,
+            }
+        }).then((res) => {
+            console.log(res.data);
+            setCurrUser(res.data.user);
+        }).catch((err) => {
+            console.log(err);
+        });
     }
-    const [currUser, setCurrUser] = useState(user);
     const auth = "dfasfdsafsafasfdsf243434324";
     const token = "dfdsfhsdifhj343fdfasfdaf";
    
 
     const [posts, setPosts] = useState(false);
+    const [postUser, SetPostUser] = useState(false);
 
     if (!posts) {
+
         axios.get("http://localhost:2345/post", {
             headers: {
                 Authorization: "Bearer " + JSON.parse(localStorage.getItem("tumblrUser")).token,
             }
         }).then((res) => {
             console.log(res.data);
-            setPosts(res.data);
+            setPosts( res.data.post);
+            SetPostUser(res.data.user);
+            console.log("postsfdsafdsf", posts);
         }).catch((err) => {
             console.log(err);
         });
     }
 
-    if (auth && token && !currUser) {
-        axios
-            .get(`${process.env.REACT_APP_API_URL}users/curruser`, {
-                headers: {
-                    Authorization: 'Bearer ' + token,
-                },
-            })
-            .then((res) => setCurrUser(res.data.user))
-            .catch((err) => console.log(err));
-    }
-
+    const [love, setLove] = useState("");
+    const [counter, setCounter] = useState(0);
     const updateUser = (user) => {
         setCurrUser(user);
     };
+
+    const handleLike = () => {
+        if (love == "") {
+            setLove("red");
+            setCounter(counter + 1);
+        } else {
+            setLove("");
+             setCounter(counter - 1);
+        }
+    }
+    const [userFollow, setUserFollow] = useState(false);
     console.log(posts, 'feed');
 
     return (
@@ -192,58 +205,39 @@ const Feed = () => {
                         </h1>
                     )}
                     {posts &&
-                        posts.post.map((el, i) => (
+                        posts.map((el, i) => (
                             <div className={styles.blog}>
                                 <div className={styles.diff1}>
                                     <img
-                                        src={"https://64.media.tumblr.com/dbc619ed53b0b1f9da04189686cb10e7/e72ec0c8ebd4ace0-49/s64x64u_c1/07e3ab69e3d9c49b56066640b7f48284317eca4b.pnj"
-                                            // el.user.avatar ==""
-                                            //  ? 
-                                                
-                                                // : el.user.avatar
-                                        }
-                                        alt="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator_square_small.gif"
+                                        src={"https://cdn1.vectorstock.com/i/thumb-large/21/40/t-small-silhouette-vector-6362140.jpg"}
                                     />
                                 </div>
 
-                                {/* <p className={styles.postHead}>
-                                    {el.blogName}
-                                    {el.user._id !== currUser?._id && (
+                                <p className={styles.postHead}>
+                                    {postUser?.blogName == "adminBlog" ? (<>
+                                          Tumblr Staff
+                                    </>) : (
+                                            <>
+                                                {postUser.blogName}
+                                            </>
+                                    )}
+                                    {currUser?._id && (
                                         <>
-                                            {!currUser.following?.includes(
-                                                el.user_id._id
-                                            ) ? (
+                                           
                                                 <span
                                                     className={
                                                         styles.cont2_infoF1
                                                     }
                                                     onClick={() =>
-                                                        handleFollowUser(
-                                                            el.user_id._id,
-                                                            updateUser
-                                                        )
+                                                      setUserFollow(!userFollow)
                                                     }
                                                 >
-                                                    Follow
+                                                    {userFollow == false ? (<>follow</>):  (<>unfollow</>)}
                                                 </span>
-                                            ) : (
-                                                <span
-                                                    className={
-                                                        styles.cont2_infoF1
-                                                    }
-                                                    onClick={() =>
-                                                        handleUnfollowUser(
-                                                            el.user_id._id,
-                                                            updateUser
-                                                        )
-                                                    }
-                                                >
-                                                    Unfollow
-                                                </span>
-                                            )}
+                                           
                                         </>
                                     )}
-                                </p> */}
+                                </p> 
                                 <hr
                                     style={{
                                         borderBottom: 'none',
@@ -286,7 +280,8 @@ const Feed = () => {
 
                                 <div className={styles.iconsBottom}>
                                     <span className={styles.cont2_infoFlast}>
-                                        {el.likedby ? el.likedby.length : 0}{' '}
+                                        {/* {el.likedby ? el.likedby.length : 0}{' '} */}
+                                        {counter}{" "}
                                         Notes
                                     </span>
                                     <div>
@@ -298,28 +293,25 @@ const Feed = () => {
                                         />
                                         <BiRepost className={styles.icon} />
 
-                                        {currUser.likes?.includes(el._id) ? (
+                                      
                                             <FavoriteIcon
                                                 className={styles.icon}
-                                                style={{ color: 'red' }}
-                                                onClick={() =>
-                                                    handleUnlikePost(
-                                                        el._id,
-                                                        updateUser
-                                                    )
+                                                style={{ color: love }}
+                                                onClick={() => handleLike()
                                                 }
                                             />
-                                        ) : (
-                                            <FavoriteBorderOutlinedIcon
-                                                className={styles.icon}
+                                       
+                                            {/* <FavoriteBorderOutlinedIcon
+                                            className={styles.icon}
+                                            style={{ backgroundColor: love }}
                                                 onClick={() =>
                                                     handleLikePost(
                                                         el._id,
                                                         updateUser
                                                     )
                                                 }
-                                            />
-                                        )}
+                                            /> */}
+                                       
                                     </div>
                                 </div>
                             </div>

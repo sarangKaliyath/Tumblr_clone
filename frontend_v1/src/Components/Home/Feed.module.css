@@ -34,11 +34,12 @@
 	border-radius: 5px;
 }
 .diff1 {
-	margin-left: -122%;
+	margin-left: -16%;
 	position: sticky;
 	top: 70px;
 	z-index: 0;
 }
+
 .diff1 > img {
 	height: 50px;
 	width: 50px;
