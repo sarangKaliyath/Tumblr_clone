@@ -1,9 +1,11 @@
 import "./App.css";
-import { ForYou } from "./Pages/Explore/ForYou";
+
+import { Routes } from "./Routes/Routes";
+
 function App() {
   return (
-    <div className="App">
-     <ForYou />
+    <div>
+      <Routes />
     </div>
   );
 }

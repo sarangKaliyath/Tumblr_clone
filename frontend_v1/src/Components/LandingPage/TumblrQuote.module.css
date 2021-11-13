@@ -1,0 +1,39 @@
+.container {
+  font-size: 21px;
+
+  /* line-height: 31.9998px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  margin: 0px 0px 10px;
+  padding: 0px; */
+  color: white;
+}
+.container > svg {
+  /* margin-bottom: 4%; */
+  margin-bottom: 7%;
+}
+
+.container > div {
+  line-height: 21.9998px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  margin: 0px 0px 10px;
+  padding: 0px;
+
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: center;
+  text-indent: 0px;
+}
+
+.container div:first-child {
+  margin-top: 10%;
+}
+.container div:last-child {
+  margin-bottom: 10%;
+}

@@ -7,9 +7,8 @@
 .right_nav_container,
 .tumblr_icon_container,
 .search_container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
-
   align-items: center;
 }
 
@@ -31,9 +30,11 @@
 }
 .login_container,
 .home_container {
+  width: 98.8vw;
   height: 54px;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
 }
 .left_nav {
   justify-content: left;
@@ -63,9 +64,13 @@
 }
 
 .search_container {
-  width: 70%;
+  margin-left: 20px;
+  width: 60%;
+  /* width: 100%; */
 }
-
+.search_container input{
+  width: 60%;
+}
 /* **************************************************** */
 
 /* ************** Right Navbar Container*************** */

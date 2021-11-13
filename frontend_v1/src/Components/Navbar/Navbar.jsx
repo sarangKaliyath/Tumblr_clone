@@ -19,7 +19,7 @@ export const Navbar = ({ page, left_nav, right_nav }) => {
         <LeftNav />
       </div>
       <div className={styles.right_nav}>
-        {right_nav}
+        {/* {right_nav} */}
         <RightNav page={page} />
       </div>
     </div>

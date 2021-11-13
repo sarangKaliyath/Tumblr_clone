@@ -1,24 +1,25 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { UserDrawer } from "./UserDrawer";
 import styles from "./Navbar.module.css";
-// import { LoginButton } from "../Buttons/LoginButton";
+import { button_style } from "./Button_style";
 import { Button } from "@mui/material";
 import { AiFillHome } from "react-icons/ai";
 import { IoCompassOutline, IoFlash } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { RiWechat2Fill } from "react-icons/ri";
-import { TiUser } from "react-icons/ti";
 import { MdModeEdit } from "react-icons/md";
 
-const button_style = [
-  { text: "Log in", color: "#00CF35", mLeft: "0%", mRight: "2%" },
-  { text: "Sign up", color: "#00B8FF", mLeft: "0%", mRight: "2%" },
-];
-
 export const RightNav = ({ page }) => {
+  const history = useHistory();
+
+  const handleClick = (link) => {
+    history.push(link);
+  };
+
   return page === "login" ? (
     <div className={styles.right_nav_container}>
-      {button_style.map(({ text, color, mRight, mLeft }) => {
+      {button_style.map(({ text, color, mRight, mLeft, link }) => {
         return (
           <Button
             size="medium"
@@ -28,6 +29,11 @@ export const RightNav = ({ page }) => {
               margin: `0% ${mRight} 0% ${mLeft}`,
               backgroundColor: color,
               minWidth: "10%",
+              fontWeight: 700,
+              color: "black",
+            }}
+            onClick={() => {
+              handleClick(link);
             }}
           >
             {text}
@@ -53,7 +59,6 @@ export const RightNav = ({ page }) => {
         <IoFlash size={25} />
       </div>
       <div>
-        {/* <TiUser size={30} /> */}
         <UserDrawer />
       </div>
       <div>
