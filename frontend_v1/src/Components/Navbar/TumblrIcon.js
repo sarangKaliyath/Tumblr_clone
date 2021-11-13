@@ -4,9 +4,14 @@ import { IoIosMail } from "react-icons/io";
 import { RiWechat2Fill } from "react-icons/ri";
 import { MdModeEdit } from "react-icons/md";
 
+
+
+
 export const home_icons = [
   <AiFillHome size={25} />,
-  <IoCompassOutline size={30} />,
+  <IoCompassOutline size={30} 
+  
+  />,
   <IoIosMail size={30} />,
   <RiWechat2Fill size={30} />,
   <IoFlash size={25} />,

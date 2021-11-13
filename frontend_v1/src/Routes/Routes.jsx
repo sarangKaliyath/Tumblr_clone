@@ -5,6 +5,8 @@ import { SignupPage } from "../Pages/SignupPage/SignupPage";
 import { LoginPage } from "../Pages/LoginPage/LoginPage";
 import SelectTag from "../Components/SelectTags/tags";
 import Home from "../Components/Home/Home";
+import { ForYou } from "../Pages/Explore/ForYou";
+import { Navbar } from "../Components/Navbar/Navbar";
 
 export const Routes = () => {
   return (
@@ -22,8 +24,13 @@ export const Routes = () => {
         <SelectTag />
       </Route>
       <Route path="/home">
+        <Navbar page = {"home"}/>
         <Home />
-      </Route>   
+      </Route>  
+      <Route path="/explore">
+      <Navbar page = {"home"}/>
+        <ForYou />
+      </Route> 
     </Switch>
   );
 };

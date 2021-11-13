@@ -99,7 +99,8 @@ export default function BasicTabs() {
       <TabPanel value={value} index={1}
         className={styles["TabPanel_1"]}
       >
-        Item Two
+        <CarousDiv />
+        <PostData />
       </TabPanel>
       <TabPanel value={value} index={2}
          className={styles["TabPanel_2"]}
@@ -112,6 +113,7 @@ export default function BasicTabs() {
             paddingRight: "4%"
         }}>
          <CarousDiv />
+         <PostData />
         </div>
       </TabPanel>
     </Box>

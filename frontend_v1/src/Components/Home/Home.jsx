@@ -232,7 +232,7 @@ const Feed = () => {
                                                       setUserFollow(!userFollow)
                                                     }
                                                 >
-                                                    {userFollow == false ? (<>follow</>):  (<>unfollow</>)}
+                                                    {userFollow === false ? (<>follow</>):  (<>unfollow</>)}
                                                 </span>
                                            
                                         </>
