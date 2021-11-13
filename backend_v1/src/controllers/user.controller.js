@@ -11,16 +11,16 @@ const newToken = (user) => {
 
 const register = async (req, res) => {
     try {
-        let user = await User.findOne({ email: req.body.email }).lean().exec()
+        let user = await User.findOne({ email: req.body.input.email }).lean().exec()
        
         if (user) {
             return res.status(400).json({ status: "error", message: "User already exists" });
         }
 
-        user = await User.create(req.body);
+        user = await User.create(req.body.input);
 
-        const token = newToken(req.body);
-
+        const token = newToken(req.body.input);
+ 
         return res.status(201).json({user, token});
     } catch (e) {
         return res.status(400).send(e.message);
@@ -29,13 +29,12 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
     try {
-        let user = await User.findOne({ email: req.body.email }).exec()
+        let user = await User.findOne({ email: req.body.input.email }).exec()
         
          if (!user) {
-            return res.status(400).json({ status: "error", message: "User not exists" });
+            return res.status(400).send("User not exists");
         }
-
-        const match = user.checkPassword(req.body.password);
+        const match = user.checkPassword(req.body.input.password);
 
         if (!match) return res.status(400).json({ status: "error", message: "password wrong" })
         

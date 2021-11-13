@@ -10,10 +10,9 @@ const upload = require("../middleware/file-upload");
 router.get("", authanticate, async function (req, res) {
 
     try {
-        const admin = await Post.findOne({ email: "admin@gamil.com"}).exec()
-        const post = await Post.find({ id: admin.id }).select().lean().exec();
-        console.log(post);
-         res.status(200).json({post: post});
+        const admin = await User.findById("618df9c343ad8385f6225992").exec()
+        const post = await Post.find({ user_id: admin.id }).select().lean().exec();
+         res.status(200).json({post: post,user: admin});
     } catch (err) {
          res.status(400).json({error: err.message});
     }
