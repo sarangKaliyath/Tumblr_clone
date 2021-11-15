@@ -11,11 +11,12 @@ import { RiShareForwardLine } from 'react-icons/ri';
 import { FaRegComments } from 'react-icons/fa';
 import { BiRepost } from 'react-icons/bi';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+// import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import { Modal } from '@mui/material';
 import { Box } from '@mui/system';
 import TextPost from './TextPost';
 import axios from 'axios';
+import { BottomSideBar } from '../Explore_Components/BottomSideBar';
 
 const style = {
     position: 'absolute',
@@ -120,7 +121,7 @@ const Feed = () => {
                 Authorization: "Bearer " + JSON.parse(localStorage.getItem("tumblrUser")).token,
             }
         }).then((res) => {
-            console.log(res.data);
+            console.log("Data",res.data);
             setPosts( res.data.post);
             SetPostUser(res.data.user);
             console.log("postsfdsafdsf", posts);
@@ -136,7 +137,7 @@ const Feed = () => {
     };
 
     const handleLike = () => {
-        if (love == "") {
+        if (love === "") {
             setLove("red");
             setCounter(counter + 1);
         } else {
@@ -209,12 +210,12 @@ const Feed = () => {
                             <div className={styles.blog}>
                                 <div className={styles.diff1}>
                                     <img
-                                        src={"https://cdn1.vectorstock.com/i/thumb-large/21/40/t-small-silhouette-vector-6362140.jpg"}
+                                        src={"https://64.media.tumblr.com/73a4d5ba6d48ef08740cea4e68c4fe9e/d5a7c6e5df114f61-69/s64x64u_c1/e9ea638d641ed8d26462f3f904b00669a9536d61.jpg"}
                                     />
                                 </div>
 
                                 <p className={styles.postHead}>
-                                    {postUser?.blogName == "adminBlog" ? (<>
+                                    {postUser?.blogName === "adminBlog" ? (<>
                                           Tumblr Staff
                                     </>) : (
                                             <>
@@ -320,7 +321,7 @@ const Feed = () => {
 
                 <div className={styles.rt_cont2}>
                     <div className={styles.rt_cont2H}>
-                        Check out these blogs
+                       <BottomSideBar />
                     </div>
                     <ul>
                         {blogs &&
