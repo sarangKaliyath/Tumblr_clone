@@ -22,6 +22,7 @@
     padding: 0 8px;
     width: 100%;
     /* border: 1px solid white; */
+    margin: auto;
 }
 
 
@@ -33,7 +34,11 @@
     flex-direction: column;
     /* max-width: 625px; */
     width: 100%;
-    margin-top: 80px;
+    /* overflow: auto; */
+    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
+    margin-top: 70px;
+    /* margin-left: 5%; */
 }
 @media (min-width: 1310px){
 .mainSubFor_II {
@@ -48,6 +53,13 @@
     box-sizing: border-box;
     padding-top: 24px;
     width: 100%;
+    margin: auto;
+   
+
+    /* height: auto; */
     /* min-height: calc(100vh - 55px + 1px); */
     /* border: 1px solid red; */
+}
+.mainSubFor_IV {
+    margin-top: 70px;
 }
