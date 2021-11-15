@@ -11,6 +11,8 @@ export const Navbar = ({ page, left_nav, right_nav }) => {
           ? styles.login_container
           : page === "home"
           ? styles.home_container
+          : page === "explore"
+          ? styles.home_container
           : styles.no_bar
       }
     >
