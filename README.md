@@ -1,5 +1,5 @@
 # Project:- Clone of Tumblr.com
-## Tumblr is an American microblogging and social networking website founded in 2007. The service allows users to post multimedia and other content to a short-form blog.
+Tumblr is an American microblogging and social networking website founded in 2007. The service allows users to post multimedia and other content to a short-form blog.
 
 ### Total Team Members: 5
 
