@@ -27,7 +27,9 @@
 .home_container {
   background-color: #001935;
   color: #ffffff;
+  border-bottom: 1px solid #21374F;
 }
+
 .login_container,
 .home_container {
   width: 98.8vw;
@@ -44,7 +46,32 @@
 .left_nav,
 .right_nav {
   width: 50%;
+  color: #A5AEB8;
 }
+
+/* right_nav bar icons hover color change */
+.home:hover {
+  color: white
+}
+.fill:hover {
+  color: white
+}
+.mail:hover {
+  color: white
+}
+.edit:hover {
+  color: white
+}
+.logout:hover {
+  color: white
+}
+.flash:hover {
+  color: white
+}
+.explore:hover {
+  color:white
+}
+
 .no_bar {
   display: none;
 }
