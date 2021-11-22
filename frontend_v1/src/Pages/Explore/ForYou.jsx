@@ -13,7 +13,7 @@ function ForYou () {
                         <BasicTabs />
                     </div>
                 </div>
-                <div>
+                <div className={styles["mainSubFor_IV"]}>
                     <SideBar />
                 </div>
             </div>

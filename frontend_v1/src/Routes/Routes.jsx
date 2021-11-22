@@ -28,7 +28,7 @@ export const Routes = () => {
         <Home />
       </Route>  
       <Route path="/explore">
-      <Navbar page = {"home"}/>
+      <Navbar page = {"explore"}/>
         <ForYou />
       </Route> 
     </Switch>
