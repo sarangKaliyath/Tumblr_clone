@@ -5,6 +5,8 @@ Tumblr is an American microblogging and social networking website founded in 200
 
 ### Total Team Members: 5
 
+### Duration: 7 Days
+
 ## How to run the app?
 <ul>
   <li>Clone the repo into the local machine.</li>
